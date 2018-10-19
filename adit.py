@@ -13,13 +13,13 @@ from googletrans import Translator
 import youtube_dl
 
 #aditmadzs = LineClient()
-aditmadzs = LineClient(authToken='Ewd2rq7YjbedhYKpAfp0.KBTxSq2R5dGbPV+/ITItqa.ritUiT2Tpj9Z8LAQKhwu2zuQfDttFt8pDAf1Oyg40Zg=')
+aditmadzs = LineClient(authToken='EyYsBG6DWOZhYX0rVxO0.KBTxSq2R5dGbPV+/ITItqa.h1bnQTZUfoL0QAl41DPujpgerRpCaKPrVN0arDbPQf0=')
 aditmadzs.log("Auth Token : " + str(aditmadzs.authToken))
 channel = LineChannel(aditmadzs)
 aditmadzs.log("Channel Access Token : " + str(channel.channelAccessToken))
 
 #ki = LineClient()
-ki = LineClient(authToken='Ewd2rq7YjbedhYKpAfp0.KBTxSq2R5dGbPV+/ITItqa.ritUiT2Tpj9Z8LAQKhwu2zuQfDttFt8pDAf1Oyg40Zg=')
+ki = LineClient(authToken='EyYsBG6DWOZhYX0rVxO0.KBTxSq2R5dGbPV+/ITItqa.h1bnQTZUfoL0QAl41DPujpgerRpCaKPrVN0arDbPQf0=')
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
@@ -1472,12 +1472,12 @@ def bot(op):
                                 else: md+="┃┃☣ [⭕️] Protectinvite「OFF」\n"                                                
                                 aditmadzs.sendMessage(msg.to, md+"┃┣━━━━━━━━━━━━━━━━━━\n┃┃❧ Tanggal : "+ datetime.strftime(timeNow,'%Y-%m-%d')+"\n┃┃❧ Jam [ "+ datetime.strftime(timeNow,'%H:%M:%S')+" ]\n  ┗━━━━━━━━━━━━━━━━━")
                                 
-                        elif cmd == "status .sepri":
+                        elif cmd == "status sela":
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                 tz = pytz.timezone("Asia/Jakarta")
                                 timeNow = datetime.now(tz=tz)
-                                md = "  ┏━━━━━━━━━━━━━━━━\n┃┃ ☣ ♠️STATUS SEPRI♠️☣\n┃┣━━━━━━━━━━━━━━━━━━━\n"
+                                md = "  ┏━━━━━━━━━━━━━━━━\n┃┃ ☣ ♠️STATUS SELA♠️☣\n┃┣━━━━━━━━━━━━━━━━━━━\n"
                                 if msg.to in translateen: md+="┃┃☣ [ℹ️] BULY「ON」\n"
                                 else: md+="┃┃☣ [⭕️] BULY「OFF」\n"
                                 if msg.to in translateid: md+="┃┃☣ [ℹ️] SOMBONG「ON」\n"
