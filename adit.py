@@ -13,13 +13,13 @@ from googletrans import Translator
 import youtube_dl
 
 #aditmadzs = LineClient()
-aditmadzs = LineClient(authToken='zqQwF7yEVWwXjaeDGo0.KBTxSq2R5dGbPV+/ITItqa.dBNyJhkctamRLOc42aGylA59dSm8hOSsIxmFf3KVMag=')
+aditmadzs = LineClient(authToken='EzqQwF7yEVWwXjaeDGo0.KBTxSq2R5dGbPV+/ITItqa.dBNyJhkctamRLOc42aGylA59dSm8hOSsIxmFf3KVMago=')
 aditmadzs.log("Auth Token : " + str(aditmadzs.authToken))
 channel = LineChannel(aditmadzs)
 aditmadzs.log("Channel Access Token : " + str(channel.channelAccessToken))
 
 #ki = LineClient()
-ki = LineClient(authToken='zqQwF7yEVWwXjaeDGo0.KBTxSq2R5dGbPV+/ITItqa.dBNyJhkctamRLOc42aGylA59dSm8hOSsIxmFf3KVMag=')
+ki = LineClient(authToken='EzqQwF7yEVWwXjaeDGo0.KBTxSq2R5dGbPV+/ITItqa.dBNyJhkctamRLOc42aGylA59dSm8hOSsIxmFf3KVMago=')
 ki.log("Auth Token : " + str(ki.authToken))
 channel1 = LineChannel(ki)
 ki.log("Channel Access Token : " + str(channel1.channelAccessToken))
@@ -1147,14 +1147,16 @@ def bot(op):
                               random.choice(ABC).kickoutFromGroup(msg.to, [msg._from])
                if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["detectMention"] == True:
+                   contact = aditmadzs.getContact(msg._from)
+                   image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
                    name = re.findall(r'@(\w+)', msg.text)
                    mention = ast.literal_eval(msg.contentMetadata['MENTION'])
                    mentionees = mention['MENTIONEES']
                    for mention in mentionees:
                         if mention ['M'] in Bots:
                            aditmadzs.sendMessage(msg.to, wait["Respontag"])
-                           aditmadzs.sendMessage(msg.to, None, contentMetadata={"STKID":"16411054","STKPKGID":"1429997","STKVER":"1"}, contentType=7)
-                           aditmadzs.sendMessage(msg.to, None, contentMetadata={"STKID":"3918700","STKPKGID":"1095566","STKVER":"1"}, contentType=7)
+                           aditmadzs.sendImageWithURL(msg.to,image)
+                           aditmadzs.sendMessage(msg.to, None, contentMetadata={"STKID":"94734116","STKPKGID":"4981191","STKVER":"1"}, contentType=7)
                            break
                if 'MENTION' in msg.contentMetadata.keys() != None:
                  if wait["Mentiongift"] == True:
